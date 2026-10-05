@@ -1,0 +1,54 @@
+{
+  "name": "@godcreator/gwb-sources",
+  "version": "0.2.0",
+  "description": "给助手统一查询、阅读和管理个人信息源的 gwb 插件：FreshRSS 与只读 IMAP，每 home 凭据、变更预览及可扩展适配模块。",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "native",
+    "skills",
+    "src"
+  ],
+  "keywords": [
+    "gwb-plugin"
+  ],
+  "publishConfig": {
+    "registry": "https://git.tianshen02.online:28377/api/packages/godcreator/npm/"
+  },
+  "scripts": {
+    "build": "node build.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "oxlint . --deny-warnings",
+    "test": "vitest run",
+    "check": "pnpm run typecheck && pnpm run lint && pnpm run test"
+  },
+  "peerDependencies": {
+    "@godcreator/gwb-commands": "^0.6.0",
+    "@godcreator/gwb-kernel-desktop": "^0.10.1",
+    "@godcreator/gwb-settings": "^0.4.0",
+    "@godcreator/gwb-skills": "^0.4.13"
+  },
+  "peerDependenciesMeta": {
+    "@godcreator/gwb-skills": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/mailparser": "^3.4.6",
+    "cordis": "4.0.0-rc.10",
+    "esbuild": "^0.28.2",
+    "imapflow": "^1.2.10",
+    "mailparser": "^3.9.3",
+    "oxlint": "1.76.0",
+    "oxlint-tsgolint": "7.0.2001",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
