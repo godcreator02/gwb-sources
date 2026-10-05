@@ -8,6 +8,7 @@
 - 命令回执和隔离 home 日志未出现 fixture 凭据原文。整合验收脚本与 27 项结果位于相邻仓 `../gwb-windows-backup/probes/2610052010_home-credentials/`。
 - Windows 凭据桥现在只负责显式读取旧引用，迁移不删除 Windows 条目。真实 Windows 凭据迁移未执行；验收使用 fake bridge。
 - 个人来源列表在 default 仍为空，本次发布阶段没有修改 default。正式版本升级由整合会话执行。
+- Sources `0.2.0` 经 devkit.release 发布后已装入上述隔离 home，再跑同一套 27 项验收全部通过；插件 ACTIVE、unmetPeers 为空。原生只读桥经 PowerShell 7 AST 解析，语法错误为 0。
 
 ## 0.1.0 历史交付记录
 
