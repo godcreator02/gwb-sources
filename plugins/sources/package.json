@@ -1,6 +1,7 @@
 {
   "name": "@godcreator/gwb-sources",
-  "version": "0.2.0",
+  "version": "0.2.1",
+  "license": "MIT",
   "description": "给助手统一查询、阅读和管理个人信息源的 gwb 插件：FreshRSS 与只读 IMAP，每 home 凭据、变更预览及可扩展适配模块。",
   "type": "module",
   "exports": {
@@ -10,13 +11,19 @@
     "dist",
     "native",
     "skills",
-    "src"
+    "src",
+    "LICENSE"
   ],
   "keywords": [
     "gwb-plugin"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/godcreator02/gwb-sources.git"
+  },
   "publishConfig": {
-    "registry": "https://git.tianshen02.online:28377/api/packages/godcreator/npm/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "scripts": {
     "build": "node build.ts",
